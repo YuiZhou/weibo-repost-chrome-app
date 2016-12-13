@@ -1,0 +1,29 @@
+{
+  "name": "Weibo Repost Tool",
+  "description": "Chrome extension that lets you batch repost a weibo post.",
+  "version": "0.1",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "permissions": [
+    "cookies",
+    "webRequest",
+    "webRequestBlocking",
+    "*://*.weibo.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.webo.com/*"],
+      "js": ["js/backgroud.js"],
+      "css" : ["css/style.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    "html/repost.html",
+    "js/*",
+    "css/*"
+  ],
+  
+  "icons": { "16": "icon-16.png", "128": "icon-128.png" }
+}
