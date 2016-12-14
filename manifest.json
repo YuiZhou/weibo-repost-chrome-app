@@ -15,7 +15,7 @@
   "content_scripts": [
     {
       "matches": ["*://*.webo.com/*"],
-      "js": ["js/backgroud.js"],
+      "js": ["js/background.js"],
       "css" : ["css/style.css"]
     }
   ],
